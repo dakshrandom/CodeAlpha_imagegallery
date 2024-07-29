@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Image Gallery</h1>
+
+        <div class="image-container">
+            <div class="image"><img src="https://github.com/dakshrandom/task2/blob/main/image10.jpg?raw=true" alt="></div>
+            <div class="image"><img src="https://github.com/dakshrandom/task2/blob/main/image7.jpg?raw=true" alt=""></div>
+            <div class="image"><img src="https://github.com/dakshrandom/task2/blob/main/image13.jpg?raw=true" alt=""></div>
+            <div class="image"><img src="https://github.com/dakshrandom/task2/blob/main/image14.jpg?raw=true" alt=""></div>
+            <div class="image"><img src="https://github.com/dakshrandom/task2/blob/main/image15.jpg?raw=true" alt=""></div>
+            <div class="image"><img src="https://github.com/dakshrandom/task2/blob/main/image16.jpg?raw=true" alt=""></div>
+            
+            <div class="image"><img src="https://github.com/dakshrandom/task2/blob/main/image17.jpg?raw=true" alt=""></div>
+            <div class="image"><img src="https://github.com/dakshrandom/task2/blob/main/image19.jpg?raw=true" alt=""></div>
+            <div class="image"><img src="https://github.com/dakshrandom/task2/blob/main/image20.jpg?raw=true" alt=""></div>
+
+        
+        </div>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="https://github.com/adminparidhi/image-gallery-project/blob/main/images/image1.jpg?raw=true" alt="">
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () =>{
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
